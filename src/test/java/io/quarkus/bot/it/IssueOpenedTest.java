@@ -1,10 +1,12 @@
 package io.quarkus.bot.it;
 
+import io.quarkiverse.githubapp.event.Issue;
 import io.quarkiverse.githubapp.testing.GitHubAppTestingResource;
 import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
 import org.kohsuke.github.GHEvent;
+import org.kohsuke.github.GHEventPayload;
 
 import java.io.IOException;
 
@@ -32,5 +34,4 @@ public class IssueOpenedTest {
                     verifyNoMoreInteractions(mocks.ghObjects());
                 });
     }
-
 }
